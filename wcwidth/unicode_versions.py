@@ -14,4 +14,5 @@ def list_versions():
     :returns: Supported Unicode version numbers in ascending sorted order.
     :rtype: list[str]
     """
-    pass
+    from .table_zero import ZERO_WIDTH
+    return sorted(ZERO_WIDTH.keys(), key=lambda x: tuple(map(int, x.split('.'))))
